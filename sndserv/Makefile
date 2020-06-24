@@ -7,11 +7,11 @@
 #
 
 CC=gcc
-CFLAGS=-O -DNORMALUNIX -DLINUX
+CFLAGS=-O -DNORMALUNIX -DLINUX 
 LDFLAGS=
 LIBS=-lm
 
-O=linux
+O=.
 
 all:	 $(O)/sndserver
 

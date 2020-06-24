@@ -1,0 +1,4 @@
+*.o
+*.wad
+linuxdoom-1.10/linuxxdoom
+sndserv/sndserver
