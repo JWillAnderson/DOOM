@@ -755,7 +755,7 @@ void I_InitGraphics(void)
 	else
 	    I_Error("bad -geom parameter");
     }
-
+    printf("Display Name: %s \n", displayname);
     // open the display
     X_display = XOpenDisplay(displayname);
     if (!X_display)
@@ -768,7 +768,9 @@ void I_InitGraphics(void)
 
     // use the default visual 
     X_screen = DefaultScreen(X_display);
-    fprintf(X_display);
+    
+    fprintf(stderr, "Printing X_display\n");
+
     if (!XMatchVisualInfo(X_display, X_screen, 8, PseudoColor, &X_visualinfo))
     	I_Error("xdoom currently only supports 256-color PseudoColor screens");
     X_visual = X_visualinfo.visual;
